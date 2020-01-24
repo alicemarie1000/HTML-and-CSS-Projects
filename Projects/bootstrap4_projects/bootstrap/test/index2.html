@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+
+  <legend>Order Pizza</legend>
+    <p>Pizza Size</p>  
+    <p>
+<form action="form_action.asp">
+        <label><input type="radio" name="si" value="psnl" />Personal</label>
+        <label><input type="radio" name="si" value="med" />Medium</label>
+        <label><input type="radio" name="si" value="lrge" />Large</label>
+	<label><input type="radio" name="si" value="Xlrg" />Extra Large</label>
+    </p>  
+
+<input type="button" onclick="myfunction()" value="Send order">
+<input type="text" id="order" size"100">
+<input type="submit" value="Submit">
+</form>
+
+<script>
+function myFunction(){    
+    var size == document.forms[0];
+    var txt = "";
+    var i;
+    for (i=0; i < size.length; i++){
+       if (size[i].checked){
+          txt = txt + size[i].value + " "; 
+       }
+}
+document.getElementById("order").value = "You ordered coffee with: " + txt;
+}
+</script>
+
+</body>
+</html>
